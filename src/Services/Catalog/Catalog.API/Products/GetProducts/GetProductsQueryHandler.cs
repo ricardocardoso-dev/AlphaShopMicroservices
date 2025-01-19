@@ -1,17 +1,17 @@
 ﻿
 namespace Catalog.API.Products.GetProducts;
 
-public record GetProductByIdQuery() : IQuery<GetProductByIdResult>;
-public record GetProductByIdResult(IEnumerable<Product> Products);
+public record GetProductsQuery() : IQuery<GetProductResult>;
+public record GetProductResult(IEnumerable<Product> Products);
 
 internal class GetProductByIdQueryHandler
     (IDocumentSession session)
-    : IQueryHandler<GetProductByIdQuery, GetProductByIdResult>
+    : IQueryHandler<GetProductsQuery, GetProductResult>
 {
-    public async Task<GetProductByIdResult> Handle(GetProductByIdQuery query, CancellationToken cancellationToken)
+    public async Task<GetProductResult> Handle(GetProductsQuery query, CancellationToken cancellationToken)
     {
         var products = await session.Query<Product>().ToListAsync(cancellationToken);
 
-        return new GetProductByIdResult(products);
+        return new GetProductResult(products);
     }
 }
