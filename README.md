@@ -1,4 +1,4 @@
-# Microservices Architecture with ASP.NET Core 8
+# Alpha Shop Microservices
 
 ## Introduction
 This project is a study-oriented microservices-based architecture built with ASP.NET Core 8. It includes a variety of modern technologies and design patterns, often incorporating overengineering intentionally to experiment with best practices, architectural concepts, and cutting-edge features. The goal is to provide hands-on experience with Minimal APIs, CQRS, MediatR, DDD, event-driven communication, and more.
