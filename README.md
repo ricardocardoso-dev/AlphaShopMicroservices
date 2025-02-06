@@ -19,11 +19,10 @@ The Catalog.API is an independent service responsible for managing the product c
 
 - **Technologies & Features:**
   - ASP.NET Core 8 Web API
-  - PostgreSQL with Marten as Transactional Document DB
-  - Minimal APIs with Carter Library
-  - Redis for Distributed Caching
-  - CQRS implementation with MediatR
-  - Marten – ORM for PostgreSQL, enabling Event Sourcing and CQRS.
+  - Carter Library for Minimal APIs implementations
+  - MediatR for Command Query Responsibility Segregation (CQRS)
+  - Marten for handling event sourcing, document storage, and complex data models in PostgreSQL.
+  - Mapster for object mapping and transformation between DTOs and entities.
 
 ## Installation
 ### Prerequisites
