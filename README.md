@@ -9,8 +9,8 @@ This project is a study-oriented microservices-based architecture built with ASP
 ![.NET Version](https://img.shields.io/badge/Basket.API-Developing-blue)
 ![.NET Version](https://img.shields.io/badge/Discount.API-Pending-purple)
 ![.NET Version](https://img.shields.io/badge/Ordering.API-Pending-purple)
-![.NET Version](https://img.shields.io/badge/Yarp_API_Gateway-Pending-purple)
-![.NET Version](https://img.shields.io/badge/Client_WebApp-Pending-purple)
+![.NET Version](https://img.shields.io/badge/API_Gateway-Pending-purple)
+![.NET Version](https://img.shields.io/badge/Client-Pending-purple)
 
 
 ## Microservices Overview
