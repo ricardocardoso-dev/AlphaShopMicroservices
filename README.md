@@ -1,4 +1,13 @@
 # Alpha Shop Microservices
+[![GitHub license](https://img.shields.io/github/license/ricardocardoso-dev/AlphaShopMicroservices?color=brightgreen)](https://github.com/ricardocardoso-dev/AlphaShopMicroservices/blob/main/LICENSE)
+[![GitHub issues](https://img.shields.io/github/issues/ricardocardoso-dev/AlphaShopMicroservices?color=brightgreen)](https://github.com/ricardocardoso-dev/AlphaShopMicroservices/issues)
+[![GitHub stars](https://img.shields.io/github/stars/ricardocardoso-dev/AlphaShopMicroservices?color=brightgreen)](https://github.com/ricardocardoso-dev/AlphaShopMicroservices/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/ricardocardoso-dev/AlphaShopMicroservices?color=brightgreen)](https://github.com/ricardocardoso-dev/AlphaShopMicroservices/network)
+[![GitHub last commit](https://img.shields.io/github/last-commit/ricardocardoso-dev/AlphaShopMicroservices?color=brightgreen)](https://github.com/ricardocardoso-dev/AlphaShopMicroservices/commits/main)
+![Lines of code](https://tokei.rs/b1/github/ricardocardoso-dev/AlphaShopMicroservices?category=code)
+![Files](https://tokei.rs/b1/github/ricardocardoso-dev/AlphaShopMicroservices?category=files)
+[![wakatime](https://wakatime.com/badge/user/957be417-f277-4ae4-a449-e6bc5785d785/project/7c0b4c2b-fd48-4ca6-b2db-ec9aefef7da0.svg)](https://wakatime.com/badge/user/957be417-f277-4ae4-a449-e6bc5785d785/project/7c0b4c2b-fd48-4ca6-b2db-ec9aefef7da0)
+
 
 ## Introduction
 This project is a study-oriented microservices-based architecture built with ASP.NET Core 8. It includes a variety of modern technologies and design patterns, often incorporating overengineering intentionally to experiment with best practices, architectural concepts, and cutting-edge features. The goal is to provide hands-on experience with Minimal APIs, CQRS, MediatR, DDD, event-driven communication, and more.
@@ -19,11 +28,10 @@ The Catalog.API is an independent service responsible for managing the product c
 
 - **Technologies & Features:**
   - ASP.NET Core 8 Web API
-  - PostgreSQL with Marten as Transactional Document DB
-  - Minimal APIs with Carter Library
-  - Redis for Distributed Caching
-  - CQRS implementation with MediatR
-  - Marten – ORM for PostgreSQL, enabling Event Sourcing and CQRS.
+  - Carter Library for Minimal APIs implementations
+  - MediatR for Command Query Responsibility Segregation (CQRS)
+  - Marten for handling event sourcing, document storage, and complex data models in PostgreSQL.
+  - Mapster for object mapping and transformation between DTOs and entities.
 
 ## Installation
 ### Prerequisites
