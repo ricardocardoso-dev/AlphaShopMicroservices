@@ -16,8 +16,8 @@ This project is a study-oriented microservices-based architecture built with ASP
 
 ![.NET Version](https://img.shields.io/badge/Catalog.API-Done-mediumgreen)
 ![.NET Version](https://img.shields.io/badge/Basket.API-Done-mediumgreen)
-![.NET Version](https://img.shields.io/badge/Discount.gRPC-Developing-blue)
-![.NET Version](https://img.shields.io/badge/Ordering.API-Pending-purple)
+![.NET Version](https://img.shields.io/badge/Discount.gRPC-Done-mediumgreen)
+![.NET Version](https://img.shields.io/badge/Ordering.API-Developing-blue)
 ![.NET Version](https://img.shields.io/badge/API_Gateway-Pending-purple)
 ![.NET Version](https://img.shields.io/badge/Client-Pending-purple)
 
@@ -32,7 +32,27 @@ The Catalog.API is an independent service responsible for managing the product c
   - MediatR for Command Query Responsibility Segregation (CQRS)
   - Marten for handling event sourcing, document storage, and complex data models in PostgreSQL.
   - Mapster for object mapping and transformation between DTOs and entities.
+ 
+### 2. **Basket.API**
+The Basket.API is an independent service designed to manage shopping basket data for users. It follows REST API principles and integrates with other services to provide a smooth and scalable checkout experience.
 
+- **Technologies & Features:**
+  - ASP.NET Core 8 Web API
+  - Redis as a distributed cache (basketdb) for storing user baskets efficiently
+  - Implements Proxy, Decorator, and Cache-aside design patterns
+  - Consumes the Discount gRPC Service for inter-service communication to calculate the final price of products
+  <!-- - Publishes checkout events using MassTransit and RabbitMQ to enable event-driven workflows -->
+
+### 3. **Discount.gRPC**
+The Discount.gRPC is a dedicated microservice that provides discount-related data via a high-performance gRPC server. It is primarily consumed by the Basket.API service to retrieve up-to-date discount information in a fast and reliable manner.
+
+- **Technologies & Features:**
+  - ASP.NET Core 8 gRPC Server application
+  - Exposes gRPC services using Protobuf message definitions
+  - Enables high-performance inter-service communication with Basket.API
+  - Entity Framework Core with SQLite provider for data access and persistence
+  - Database containerization with SQLite for lightweight deployment and integration
+    
 ## Installation
 ### Prerequisites
 - [.NET 8 SDK](https://dotnet.microsoft.com/download)
